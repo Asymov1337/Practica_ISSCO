@@ -10,13 +10,12 @@ $db=mysql_select_db(DB_NAME,$con) or die("Conectare nereusita: " . mysql_error()
 function NewUser()
 {
 	$full_name=$_POST['name'];
-	$phone=$_POST['phone'];
 	$email=$_POST['email'];
-	$password=$_POST['password'];
+	$phone=$_POST['phone'];
 	$user_role=$_POST['user'];
 	$date_registered=$_POST['date'];
 	
-	$query="INSERT INTO accounts (full_name,phone,email,password,user_role,date_registered) VALUES ('$fullname','$phone','$email','$password','$user_role','$date_registered')";
+	$query="INSERT INTO users (full_name,email,phone,user_role,date_registered) VALUES ('$full_name','$email','$phone','$user_role','$date_registered')";
 	$data=mysql_query($query) or die(mysql_error());
 	if $data{
 		echo "Inregistrat cu succes";
@@ -26,8 +25,8 @@ function NewUser()
 function SignUp(){
 	if(!empty)($_POST['email']) 
 	{
-		$query=mysql_query ("SELECT * FROM accounts WHERE $email=$_POST['email'] and password=$_POST['password']",
-		mysql_real_escape_string($email), mysql_real_escape_string($password) or die(mysql_error()));
+		$query=mysql_query ("SELECT * FROM users WHERE $email=$_POST['email']",
+		mysql_real_escape_string($email), or die(mysql_error()));
 	}
 	if(!$row=mysql_fetch_array($query) or die(mysql_error()))
 	{
