@@ -17,5 +17,5 @@ session_start();
 		$sql = "DELETE FROM users WHERE userID='$id'";
 												$result = $conn->query($sql);
 												
-												header('location: doc.php');
+												header('location: dashboard.php');
 ?>
