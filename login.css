@@ -1,0 +1,58 @@
+#ac-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: url(1.jpg);
+z-index: 1001;
+}
+#popup{
+    position: absolute;
+width: 50%;
+height: 50%;
+background-color: rgba(0,0,0,0.7);
+border: 5px solid #000;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+
+
+top: 25%; left: 25%;
+align-content: center;
+}
+
+
+
+body{
+
+	position: absolute;
+	color: #ccc;
+}
+input[type=text], input[type=password] {
+
+
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+input[type=submit]{
+	 background-color: #b11954;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 25px;
+    text-transform: uppercase;
+
+
+}
+input[type=submit]:hover{
+	 opacity: 0.8;
+}
